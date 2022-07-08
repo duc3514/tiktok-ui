@@ -1,0 +1,16 @@
+.warpper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: var(--Default-layout-width);
+    padding: 0 var(--Default-layout-horizontal-spacer);
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    flex: 1;
+}

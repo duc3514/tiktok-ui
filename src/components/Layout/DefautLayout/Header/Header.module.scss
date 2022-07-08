@@ -1,0 +1,56 @@
+.warpper {
+    --search-border-radius: 92px;
+    --search-hight: 46px;
+    --search-top-speacer: 9px;
+    --serach-button-width: 52px;
+    width: 100%;
+    height: var(--Default-layout-header-hight);
+    box-shadow: 0 1px 1px rgba(0 0 0 / 12%);
+    display: flex;
+    justify-content: center;
+}
+.inner {
+    width: var(--Default-layout-width);
+    height: 100%;
+    padding: 0 var(--Default-layout-horizontal-spacer);
+    // background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+.actions-btn {
+    background-color: transparent;
+    font-size: 2.2rem;
+    color: #161823;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.more-btn {
+    font-size: 2rem;
+    margin-left: 28px;
+    background-color: transparent;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+// Menu
+.menu-items {
+    width: 224px;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
+}
