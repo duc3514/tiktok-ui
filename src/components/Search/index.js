@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 
-import * as apiSearch from '~/apiServices/apiSearch'
+import * as apiSearch from '~/services/apiSearch';
 import styles from './search.module.scss';
 import { faCircleXmark, faL, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { Warpper as PropperWrapper } from '~/components/Poper';
@@ -11,7 +11,6 @@ import HasTippy from '@tippyjs/react/headless'; // different import path!
 import { SearchIcon } from '~/components/Icons';
 import { useDebounce } from '~/hooks';
 const cx = classNames.bind(styles);
-
 
 function Search() {
     // Search Value
@@ -23,7 +22,7 @@ function Search() {
     const [showResult, setShowResult] = useState(true);
     const [loading, setLoading] = useState(false);
 
-    const debouce = useDebounce(searchValue, 600)
+    const debouce = useDebounce(searchValue, 600);
 
     useEffect(() => {
         if (!debouce.trim()) {
@@ -33,22 +32,22 @@ function Search() {
 
         setLoading(true);
 
-        
-
         const fetchApi = async () => {
-            setLoading(true)
-            const result = await apiSearch.search(debouce)
-            setSerachResult(result)
-            setLoading(false)
+            setLoading(true);
+            const result = await apiSearch.search(debouce);
+            setSerachResult(result);
+            setLoading(false);
+        };
 
-        }
-
-        fetchApi()
-          
-
-           
+        fetchApi();
     }, [debouce]);
 
+    const HandleChanges = (e) => {
+        const searchValue = e.target.value;
+        if (!searchValue.startsWith(' ') || searchValue.trim('')) {
+            setSearchValue(searchValue);
+        }
+    };
     const HandleClear = () => {
         setSearchValue('');
         inputRef.current.focus();
@@ -81,7 +80,7 @@ function Search() {
                     value={searchValue}
                     placeholder="Search accounts and videos"
                     spellCheck={false}
-                    onChange={(e) => setSearchValue(e.target.value)}
+                    onChange={HandleChanges}
                     onFocus={() => setShowResult(true)}
                 />
                 {!!searchValue && !loading && (

@@ -40,6 +40,94 @@ const MENU_ITEMS = [
                     code: 'vi',
                     title: 'Vietnam',
                 },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+
+                    code: 'vi',
+                    title: 'Vietnam',
+                },
             ],
         },
     },
